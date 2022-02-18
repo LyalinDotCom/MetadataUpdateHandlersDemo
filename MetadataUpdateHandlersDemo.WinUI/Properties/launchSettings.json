@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "MetadataUpdateHandlersDemo.WinUI (Package)": {
+      "commandName": "MsixPackage",
+      "nativeDebugging":  false
+    },
+    "MetadataUpdateHandlersDemo.WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
