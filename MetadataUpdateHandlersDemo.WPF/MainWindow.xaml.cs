@@ -26,11 +26,13 @@ namespace MetadataUpdateHandlersDemo.WPF
         {
             InitializeComponent();
 
+#if DEBUG
             HotReloadService.UpdateApplicationEvent += HotReloadService_UpdateApplicationEvent;
-
+#endif
             LoadData();
         }
 
+#if DEBUG
         private void HotReloadService_UpdateApplicationEvent(Type[]? obj)
         {
             Application.Current.Dispatcher.Invoke(() =>
@@ -39,6 +41,7 @@ namespace MetadataUpdateHandlersDemo.WPF
                 Debug.WriteLine("MetadataUpdateHandler - WPF");
             });
         }
+#endif
 
         private void buttonTest_Click(object sender, RoutedEventArgs e)
         {
