@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="buttonTest" Content="Test" Click="buttonTest_Click" Width="100" Height="75  " />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <ListBox x:Name="ListOfItems" Grid.Row="0" Margin="5">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListBox>
+        <Button x:Name="buttonTest" Grid.Row="1"
+                Content="Test" Click="buttonTest_Click" Width="100" Height="75  " />
     </Grid>
 </Window>
