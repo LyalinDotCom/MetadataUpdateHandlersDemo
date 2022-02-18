@@ -19,7 +19,7 @@ namespace MetadataUpdateHandlersDemo.WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("test 3");
+            MessageBox.Show("test");
         }
     }
 }

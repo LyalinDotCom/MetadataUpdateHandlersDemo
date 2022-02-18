@@ -35,11 +35,12 @@ namespace MetadataUpdateHandlersDemo.WinUI
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
 
-            myButton.Content = "Clicked 6";
+            myButton.Content = "Clicked";
         }
 
         private void HotReloadService_UpdateApplicationEvent(Type[] obj)
         {
+            // Note: This only works with Visual Studio 2022 version 17.2 Preview 2 or higher
             Debug.WriteLine("MetadataUpdateHandler - WinUI 3");
         }
     }

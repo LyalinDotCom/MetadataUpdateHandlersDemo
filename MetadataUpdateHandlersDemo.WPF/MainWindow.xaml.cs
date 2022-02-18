@@ -36,7 +36,7 @@ namespace MetadataUpdateHandlersDemo.WPF
 
         private void buttonTest_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Test 2");
+            MessageBox.Show("Test");
         }
     }
 }
