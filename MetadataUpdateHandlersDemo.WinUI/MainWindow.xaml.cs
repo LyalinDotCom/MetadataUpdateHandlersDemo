@@ -35,7 +35,7 @@ namespace MetadataUpdateHandlersDemo.WinUI
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
 
-            myButton.Content = "Clicked";
+            myButton.Content = "Click 3";
         }
 
         private void HotReloadService_UpdateApplicationEvent(Type[] obj)

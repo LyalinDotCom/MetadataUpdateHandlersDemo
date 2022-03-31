@@ -22,14 +22,18 @@ namespace MetadataUpdateHandlersDemo.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DataLoader _dl;
+
         public MainWindow()
         {
             InitializeComponent();
 
+            _dl = new DataLoader();
+
 #if DEBUG
             HotReloadService.UpdateApplicationEvent += HotReloadService_UpdateApplicationEvent;
 #endif
-            LoadData();
+            LoadData(_dl);
         }
 
 #if DEBUG
@@ -37,7 +41,7 @@ namespace MetadataUpdateHandlersDemo.WPF
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
-                LoadData(); // You need to add this before running the app since "this" can't yet be captured at runtime
+                LoadData(_dl); // You need to add this before running the app since "this" can't yet be captured at runtime
                 Debug.WriteLine("MetadataUpdateHandler - WPF");
             });
         }
@@ -48,7 +52,7 @@ namespace MetadataUpdateHandlersDemo.WPF
             MessageBox.Show("Test");
         }
 
-        private void LoadData()
+        private void LoadData(DataLoader dl)
         {
             // You can change the list below and upon applying .NET Hot Reload the items will load without UI interaction needed
 
